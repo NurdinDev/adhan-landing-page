@@ -4,45 +4,16 @@ import Logo from '~/components/common/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
-import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permalinks';
+import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 
 const links = [
   {
-    text: 'Pages',
-    links: [
-      {
-        text: 'Features',
-        href: '#',
-      },
-      {
-        text: 'Pricing',
-        href: '#',
-      },
-      {
-        text: 'About us',
-        href: '#',
-      },
-      {
-        text: 'Contact',
-        href: '#',
-      },
-      {
-        text: 'Terms',
-        href: getPermalink('/terms'),
-      },
-      {
-        text: 'Privacy policy',
-        href: getPermalink('/privacy'),
-      },
-    ],
+    text: 'Terms',
+    href: getPermalink('/terms'),
   },
   {
-    text: 'Resources',
-    href: getPermalink('useful-resources-to-create-websites', 'post'),
-  },
-  {
-    text: 'Blog',
-    href: getBlogPermalink(),
+    text: 'Privacy policy',
+    href: getPermalink('/privacy'),
   },
 ];
 ---
@@ -98,7 +69,7 @@ const links = [
         <li class="md:hidden">
           <a
             class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="https://github.com/onwidget/astrowind">Github</a
+            href="https://github.com/NurdinDev/adhan-app-for-slack">Github</a
           >
         </li>
       </ul>
@@ -106,16 +77,12 @@ const links = [
         <div class="hidden items-center md:flex">
           <ToggleTheme iconClass="w-5 h-5" />
           <a
-            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-            aria-label="RSS Feed"
-            href={getPermalink('/rss.xml')}
+            class="btn w-full ml-3 py-2.5 px-5 text-gray-600 shadow-none text-sm font-bold"
+            href="https://7qx2m6kbf5.execute-api.us-east-1.amazonaws.com/slack/install"
           >
-            <Icon name="tabler:rss" class="w-5 h-5" />
+            <Icon name="logos:slack-icon" class="w-6 h-6 mr-4" />
+            Add to Slack
           </a>
-          <a
-            class="btn w-full ml-3 py-2.5 px-5 font-semibold text-gray-600 shadow-none text-sm"
-            href="https://github.com/onwidget/astrowind">Download</a
-          >
         </div>
       </div>
     </nav>

@@ -8,7 +8,6 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import HighlightedPosts from '~/components/blog/HighlightedPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -24,23 +23,30 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{
+      text: 'Add to Slack',
+      href: 'https://7qx2m6kbf5.execute-api.us-east-1.amazonaws.com/slack/install',
+      icon: 'logos:slack-icon',
+    }}
+    callToAction2={{
+      text: 'Github',
+      href: 'https://github.com/NurdinDev/adhan-app-for-slack',
+      icon: 'mdi:github',
+    }}
+    image={{ src: import('~/assets/images/hero.png'), alt: 'Adhan Hero Image' }}
   >
     <Fragment slot="title">
-      Your website with <span>Astro</span> + <span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Adhan app for <span>Slack</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span class="font-semibold underline decoration-wavy decoration-1 decoration-primary-600 underline-offset-2"
-          >AstroWind</span
-        > is a free, production-ready template to start your new website using <em>Astro</em> + <em>Tailwind CSS</em
-        >.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-primary-600">AstroWind: Free template.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+          >Adhan.</span
+        >
+        is an Islamic prayer times reminder configurable and simple to use, the App job is to help you remember praying before
+        the next prayer time by sending a friendly notification.
+      </span>
     </Fragment>
   </Hero>
 
@@ -121,10 +127,6 @@ const meta = {
           'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
       },
     ]}
-    image={{
-      src: import('~/assets/images/caos.jpg'),
-      alt: 'Colorful Image',
-    }}
   />
 
   <!-- Content Widget **************** -->
@@ -152,10 +154,6 @@ const meta = {
         title: 'Nulla omittam sadipscing mel ne',
       },
     ]}
-    image={{
-      src: import('~/assets/images/vintage.jpg'),
-      alt: 'Vintage Image',
-    }}
   />
 
   <!-- Steps Widget ****************** -->
@@ -186,10 +184,6 @@ const meta = {
         icon: 'tabler:check',
       },
     ]}
-    image={{
-      src: import('~/assets/images/creativity.jpg'),
-      alt: 'Steps image',
-    }}
   />
 
   <!-- Features2 Widget ************** -->
@@ -253,22 +247,6 @@ const meta = {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
         icon: 'icon-park:page-template',
       },
-    ]}
-  />
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <HighlightedPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
-		`}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
     ]}
   />
 
